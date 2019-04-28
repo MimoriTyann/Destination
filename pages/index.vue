@@ -1,25 +1,20 @@
 <template>
-  <div>
-    <div class="header">Destination</div>
+  <section>
+    <header-model></header-model>
 
     <nuxt-child></nuxt-child>
-  </div>
+  </section>
 </template>
 
 <script>
-// import Logo from '~/components/Logo.vue'
+import HeaderModel from '~/components/header/header.vue'
 
 export default {
-  // components: {
-  //   Logo
-  // }
+  components: {
+    HeaderModel
+  }
 }
 </script>
 
 <style scoped lang="scss">
-.header {
-  background: #666;
-  color: #000;
-  height: 50px;
-}
 </style>
