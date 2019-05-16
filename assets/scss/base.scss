@@ -1,7 +1,14 @@
-body {
-  width: 100%;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .flow-hidden {
   overflow: hidden;
+}
+
+/*隐藏滚轮*/
+::-webkit-scrollbar {
+  display: none;
 }

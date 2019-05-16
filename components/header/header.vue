@@ -88,7 +88,7 @@ export default {
   width: 100%;
   height: 100%;
   z-index: 100;
-  background: rgba(7, 7, 7, 0.7);
+  background: rgba(7, 7, 7, 0.5);
 }
 
 .fade-enter-active,
