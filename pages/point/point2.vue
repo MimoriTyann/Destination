@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div>point</div>
+    <div>point2</div>
     <nuxt-link :to="{name: 'index'}">Change</nuxt-link>
   </section>
 </template>
@@ -10,9 +10,4 @@ export default {}
 </script>
 
 <style scoped lang="scss">
-.header {
-  background: #666;
-  color: #000;
-  height: 50px;
-}
 </style>

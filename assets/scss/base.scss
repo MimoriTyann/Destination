@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,7 +8,26 @@
   overflow: hidden;
 }
 
-/*隐藏滚轮*/
+// 隐藏滚轮
 ::-webkit-scrollbar {
   display: none;
+}
+
+
+
+// 初始化a标签
+a {
+  text-decoration: none;
+  color: #000;
+
+  // 关闭点击高亮
+  -webkit-tap-highlight-color: transparent;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: #000;
+  }
 }

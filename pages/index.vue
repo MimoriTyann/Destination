@@ -1,20 +1,16 @@
 <template>
   <section>
-    <header-model></header-model>
-
-    <nuxt-child></nuxt-child>
+    <div class="index-content">index</div>
+    <nuxt-link :to="{name: 'point'}">Change</nuxt-link>
   </section>
 </template>
 
 <script>
-import HeaderModel from '~/components/header/header.vue'
-
-export default {
-  components: {
-    HeaderModel
-  }
-}
+export default {}
 </script>
 
 <style scoped lang="scss">
+.index-content {
+  height: 100px;
+}
 </style>

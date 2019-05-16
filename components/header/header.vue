@@ -2,18 +2,29 @@
   <section>
     <div class="header-wrap">
       <div class="header-wrap-in">
-        <div class="menu-btn" @click="openMenu()">M</div>
+        <div class="menu-btn" @click="openMenu">M</div>
         <div class="logo">Destination</div>
       </div>
     </div>
 
     <transition name="fade">
       <div v-show="menuActive" class="menu-wrap">
-        <div class="title">Test</div>
+        <div class="menu-cont">
+          <div v-for="(title, key) in menuList" :key="key" class="title">
+            <nuxt-link :to="{name: key}" class="title-first" @click.native="closeMenu">{{key}}</nuxt-link>
+            <nuxt-link
+              v-for="(item, index) in title"
+              :key="index"
+              :to="{name: `${key}-${item}`}"
+              class="title-second"
+              @click.native="closeMenu"
+            >{{item}}</nuxt-link>
+          </div>
+        </div>
       </div>
     </transition>
 
-    <div v-show="menuActive" class="menu-mask" @click="closeMenu()"></div>
+    <div v-show="menuActive" class="menu-mask" @click="closeMenu"></div>
   </section>
 </template>
 
@@ -22,7 +33,12 @@ export default {
   name: 'Header',
   data() {
     return {
-      menuActive: false
+      menuActive: false,
+      menuList: {
+        index: [],
+        point: ['point1', 'point2', 'point3'],
+        music: []
+      }
     }
   },
   methods: {
@@ -39,6 +55,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+// header
 .header-wrap {
   position: relative;
   height: 50px;
@@ -50,13 +67,13 @@ export default {
     align-items: center;
     height: 50px;
     width: 100%;
-    background: #8eff8e;
+    background: #999;
     z-index: 50;
     .menu-btn {
       position: absolute;
       top: 0;
       left: 0;
-      height: 30px;
+      height: 50px;
       line-height: 30px;
       font-size: 20px;
       font-weight: bold;
@@ -70,6 +87,7 @@ export default {
   }
 }
 
+// menu
 .menu-wrap {
   position: fixed;
   width: 80%;
@@ -77,8 +95,18 @@ export default {
   top: 0;
   bottom: 0;
   background: #fff;
-  padding: 20px 0;
   z-index: 101;
+  .menu-cont {
+    padding: 20px;
+    .title {
+      a {
+        display: block;
+        &.nuxt-link-exact-active {
+          color: aqua;
+        }
+      }
+    }
+  }
 }
 
 .menu-mask {
@@ -91,6 +119,7 @@ export default {
   background: rgba(7, 7, 7, 0.5);
 }
 
+// animate
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.2s linear;
