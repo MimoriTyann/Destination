@@ -33,7 +33,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/global'],
+  plugins: ['@/plugins/global', { src: '@/plugins/iconfont', ssr: false }],
 
   /*
    ** Nuxt.js modules

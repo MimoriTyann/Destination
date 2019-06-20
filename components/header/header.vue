@@ -2,7 +2,11 @@
   <section>
     <div class="header-wrap">
       <div class="header-wrap-in">
-        <div class="menu-btn" @click="openMenu">M</div>
+        <div class="menu-btn" @click="openMenu">
+          <svg class="icon menu-btn-icon">
+            <use xlink:href="#icon-icon-test"></use>
+          </svg>
+        </div>
         <div class="logo">Destination</div>
       </div>
     </div>
@@ -67,17 +71,24 @@ export default {
     align-items: center;
     height: 50px;
     width: 100%;
-    background: #999;
     z-index: 50;
     .menu-btn {
       position: absolute;
       top: 0;
       left: 0;
       height: 50px;
-      line-height: 30px;
-      font-size: 20px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 25px;
       font-weight: bold;
-      padding: 10px;
+      background: #a8da70;
+      border-bottom-right-radius: 100%;
+      .menu-btn-icon {
+        transform: translate(-5px, -5px);
+      }
     }
     .logo {
       font-size: 20px;
