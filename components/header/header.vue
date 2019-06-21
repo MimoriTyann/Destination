@@ -7,7 +7,7 @@
             <use xlink:href="#icon-icon-test"></use>
           </svg>
         </div>
-        <div class="logo">Destination</div>
+        <nuxt-link :to="{name: 'index'}" class="logo">Destination</nuxt-link>
       </div>
     </div>
 
@@ -39,7 +39,8 @@ export default {
     return {
       menuActive: false,
       menuList: {
-        index: [],
+        // index: [],
+        demo: ['demo1', 'demo2', 'demo3'],
         point: ['point1', 'point2', 'point3'],
         music: []
       }
