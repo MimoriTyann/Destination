@@ -73,6 +73,7 @@ export default {
     height: 50px;
     width: 100%;
     z-index: 50;
+    background: #fff;
     .menu-btn {
       position: absolute;
       top: 0;

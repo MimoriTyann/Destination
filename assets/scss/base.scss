@@ -13,8 +13,6 @@
   display: none;
 }
 
-
-
 // 初始化a标签
 a {
   text-decoration: none;
@@ -29,5 +27,28 @@ a {
   &:active {
     text-decoration: none;
     color: #000;
+  }
+}
+
+.point-wrap {
+  padding: 10px;
+  // p {
+  //   padding-bottom: 5px;
+  // }
+  .point-first-title {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 0;
+  }
+  .point-second-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 5px 0;
+  }
+  .point-cont {
+    font-size: 15px;
+    margin-left: 20px;
+    padding: 5px 0;
   }
 }
