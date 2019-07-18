@@ -1,6 +1,7 @@
 <template>
   <section>
     <div class="index-content">index</div>
+    <nuxt-link :to="{name: 'demo-demo1'}">demo1</nuxt-link>
     <nuxt-link :to="{name: 'point'}">Change</nuxt-link>
   </section>
 </template>

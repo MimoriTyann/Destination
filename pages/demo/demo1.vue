@@ -1,13 +1,21 @@
 <template>
   <section>
-    <div>demo1</div>
-    <nuxt-link :to="{name: 'index'}">Change</nuxt-link>
+    <div class="demo-title"></div>
+    <infiniteScroll></infiniteScroll>
   </section>
 </template>
 
 <script>
-export default {}
+import infiniteScroll from '~/components/demo/infinite-scroll'
+export default {
+  components: {
+    infiniteScroll
+  }
+}
 </script>
 
 <style scoped lang="scss">
+.demo-title {
+  height: 200px;
+}
 </style>
