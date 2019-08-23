@@ -5,6 +5,7 @@
       :style="{left: `${positionX}px`, top: `${positionY}px`}"
       @touchstart="dragStart"
       @touchmove="dragMove"
+      @touchmove.prevent
     ></div>
   </div>
 </template>
@@ -13,10 +14,10 @@
 export default {
   data() {
     return {
-      startX: 0,
-      startY: 0,
-      positionX: 0,
-      positionY: 0,
+      startX: 50,
+      startY: 50,
+      positionX: 50,
+      positionY: 50,
       touchX: 0,
       touchY: 0,
       dragX: 0,
