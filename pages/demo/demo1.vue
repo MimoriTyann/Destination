@@ -59,7 +59,7 @@ export default {
 
 <style scoped lang="scss">
 .drag-wrap {
-  position: absolute;
+  position: relative;
   overflow: hidden;
   width: 100%;
   height: 500px;
